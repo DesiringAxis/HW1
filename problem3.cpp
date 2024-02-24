@@ -2,7 +2,9 @@
 #include <string>
 #include <map>
 using namespace std;
+// New class "Plane"
 class Plane {
+// Use container from Q2 and introduces new variables
 private:
     double pos;
     double vel;
@@ -11,6 +13,7 @@ private:
     string origin;
     string destination;
     map<string, map<string, int>> flights;
+// Public members with constuctor, deconstructor, new operate function, and get functions
 public:
     Plane(const string& from, const string& to) : origin(from), destination(to) {
         pos = 0.0;
@@ -54,6 +57,7 @@ public:
     void setVel(double velocity) { vel = velocity; }
     void setDestination(const string& dest) { destination = dest; }
 };
+// Prints current info for plane
 int main() {
     Plane plane("SCE", "EWR");
     plane.setVel(100);
