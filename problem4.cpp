@@ -36,6 +36,7 @@ public:
     void setOrigin(const string& o) { origin = o; }
     string getDestination() const { return destination; }
     void setDestination(const string& d) { destination = d; }
+    // flowchart implementation
     void operate(double dt) {
         if (pos < distance) {
             pos += vel * dt;
@@ -52,6 +53,7 @@ public:
         }
     }
 };
+// prints out information on plane and allows to change velocity and time elasped
 int main() {
     Plane plane("SCE", "ORD");
     cout << "Current position: " << plane.getPos() << " miles" << endl;

@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
 class Plane;
+//New Pilot class
 class Pilot {
+// new string variable "name"
 private:
     std::string name;
     Plane* myPlane;
+// contains a constructor, deconstructor, get function, and pointer
 public:
     Pilot(const std::string& pilotName, Plane* plane) : name(pilotName), myPlane(plane) {
         std::cout << name << " is at the gate, ready to board the plane." << std::endl;

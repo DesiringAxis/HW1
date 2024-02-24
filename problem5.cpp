@@ -32,6 +32,7 @@ public:
     string getOrigin() const { return origin; }
     string getDestination() const { return destination; }
     void setVel(double velocity) { vel = velocity; }
+    // change from hours to seconds
     void operate(double dt) {
         double distanceCovered = vel * dt / 3600;
         if (pos < distance) {
@@ -49,6 +50,7 @@ public:
         }
     }
 };
+// allows user to input in velocity, time step, and iterations and prints them out afterwards
 int main() {
     string origin, destination;
     cout << "Enter origin airport: ";
